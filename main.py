@@ -242,31 +242,6 @@ async def выйти(interaction: disnake.AppCmdInter):
     else:
         await interaction.send("бот вышел.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #от ембеды
 @client.slash_command(name='ембед', help='вызывает красивый текст')
 async def ембед(interaction: disnake.AppCmdInter, color, title, name, *, value):

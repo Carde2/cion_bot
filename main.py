@@ -18,7 +18,6 @@ import sys
 import os
 import asyncio
 import ffmpeg
-import logging
 
 from colorama import Fore, Back, Style
 from dotenv import load_dotenv
@@ -40,26 +39,9 @@ intents.typing = False
 load_dotenv()
 
 # получение токена из env файла
-DISCORD_TOKEN = os.getenv("discord_token")
+DISCORD_TOKEN = os.getenv("token")
 
 youtube_dl.utils.bug_reports_message = lambda: ''
-
-logging.debug("debugmsg")
-logging.info("infomsg")
-logging.warning("WARNmsg")
-logging.error("ERRORmsg")
-logging.critical("CRTmsg")
-
-
-sheptun="%(asctime)s %(levelname)s %(message)s"
-data="%m/%d %I:%M:%S %p"
-logging.basicConfig(format={sheptun}, level=logging.info, filename="logs/logsCION.txt",filemode="a", datefmt='data')
-
-
-abob=[
-    logging.FileHandler("debug.txt"),
-    logging.StreamHandler(sys.stdout)
-]
 
 
 ydl_opts = {
